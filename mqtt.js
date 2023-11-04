@@ -4,8 +4,8 @@ function startConnectT() {
     port = 8081;
     // userId  = document.getElementById("username").value;  
     // passwordId = document.getElementById("password").value;  
-    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + "on port " + port + "</span><br>";
-    document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
+    document.getElementById("messages").innerHTML += "<span> Connecting... </span><br>"
+    // document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
     client = new Paho.Client(host, Number(port), clientID);
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
@@ -24,8 +24,8 @@ function startConnectLat() {
     port = 8081;
     // userId  = document.getElementById("username").value;  
     // passwordId = document.getElementById("password").value;  
-    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + "on port " + port + "</span><br>";
-    document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
+    document.getElementById("messages").innerHTML += "<span> Connecting... </span><br>";
+    // document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
     client = new Paho.Client(host, Number(port), clientID);
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
@@ -44,8 +44,8 @@ function startConnectLong() {
     port = 8081;
     // userId  = document.getElementById("username").value;  
     // passwordId = document.getElementById("password").value;  
-    document.getElementById("messages").innerHTML += "<span> Connecting to " + host + "on port " + port + "</span><br>";
-    document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
+    document.getElementById("messages").innerHTML += "<span> Connecting... </span><br>";
+    // document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
     client = new Paho.Client(host, Number(port), clientID);
     client.onConnectionLost = onConnectionLost;
     client.onMessageArrived = onMessageArrived;
@@ -62,7 +62,7 @@ function startConnectLong() {
 function onConnectT() {
     topic = "pet123-tem"
 
-    document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic + "</span><br>";
+    document.getElementById("messages").innerHTML += "<span> Showing body temperature... </span><br>";
 
     client.subscribe(topic);
 }
@@ -70,7 +70,7 @@ function onConnectT() {
 function onConnectLat() {
     topic = "pet123-lat"
 
-    document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic + "</span><br>";
+    document.getElementById("messages").innerHTML += "<span> Showing latitude... </span><br>";
 
     client.subscribe(topic);
 }
@@ -78,7 +78,7 @@ function onConnectLat() {
 function onConnectLong() {
     topic = "pet123-long"
 
-    document.getElementById("messages").innerHTML += "<span> Subscribing to topic " + topic + "</span><br>";
+    document.getElementById("messages").innerHTML += "<span> Showing longitude... </span><br>";
 
     client.subscribe(topic);
 }
@@ -94,7 +94,7 @@ function onConnectionLost(responseObject) {
 
 function onMessageArrived(message) {
     console.log("OnMessageArrived: " + message.payloadString);
-    document.getElementById("messages").innerHTML += "<span> Topic:" + message.destinationName + "| Message : " + message.payloadString + "</span><br>";
+    document.getElementById("messages").innerHTML += "<span> Showing:" + message.destinationName + "| Message : " + message.payloadString + "</span><br>";
 }
 
 function startDisconnect() {
