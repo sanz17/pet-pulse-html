@@ -1,6 +1,6 @@
-body {
+/* body {
     font-family: "Open Sans", sans-serif;
-}
+} */
 .wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -23,14 +23,8 @@ input[type=text] {
 
     margin: 8px 0;
 }
-input[type=password] {
-  width:100%;
-    padding: 12px 12px;
-        height: 10px;
 
-    margin: 4px 2px;
-}
-input[type=button] {
+/* input[type=button] {
     background-color: gray;
     border: none;
     color: black;
@@ -41,13 +35,13 @@ input[type=button] {
 
     margin: 4px 2px;
     cursor: pointer;
-}
+} */
 input[type=text]:focus {
     background-color: lightblue;
 }
-input[type=button]:hover {
+/* input[type=button]:hover {
     background-color: #686868;
-}
+} */
 
 #Main_heading{
      text-align: center;
@@ -59,7 +53,7 @@ input[type=button]:hover {
     padding: 12px;
     width:100%;
     display: inline-block;
-    border:1px solid black;
+    /* border:1px solid black; */
     max-height: 250px;
     min-height: 250px;
     overflow: scroll;
