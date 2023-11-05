@@ -58,6 +58,26 @@ function startConnectLong() {
     });
 }
 
+function startConnectActivity() {
+    clientID = "petpulse#1234@455";
+    host = "test.mosquitto.org";
+    port = 8081;
+    // userId  = document.getElementById("username").value;  
+    // passwordId = document.getElementById("password").value;  
+    document.getElementById("messages").innerHTML += "<span> Connecting... </span><br>";
+    // document.getElementById("messages").innerHTML += "<span> Using the client Id " + clientID + " </span><br>";
+    client = new Paho.Client(host, Number(port), clientID);
+    client.onConnectionLost = onConnectionLost;
+    client.onMessageArrived = onMessageArrived;
+    client.connect({
+        // 'timeout': 10,
+        // 'keepAliveInterval': 20,
+        // 'cleanSession': true,
+        // 'useSSL': false,
+        'onSuccess': onConnectActivity
+    });
+}
+
 
 function onConnectT() {
     topic = "pet123-tem"
@@ -79,6 +99,14 @@ function onConnectLong() {
     topic = "pet123-long"
 
     document.getElementById("messages").innerHTML += "<span> Showing longitude... </span><br>";
+
+    client.subscribe(topic);
+}
+
+function onConnectActivity() {
+    topic = "pet123-mot"
+
+    document.getElementById("messages").innerHTML += "<span> Showing activity... </span><br>";
 
     client.subscribe(topic);
 }
