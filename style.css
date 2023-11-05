@@ -62,3 +62,51 @@ input[type=text]:focus {
     overflow-y: scroll;
     overflow: scroll;
 }
+
+#messagesLat {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    width:100%;
+    display: inline-block;
+    /* border:1px solid black; */
+    max-height: 250px;
+    min-height: 250px;
+    overflow: scroll;
+}
+#messagesLat span {
+    overflow-y: scroll;
+    overflow: scroll;
+}
+
+#messagesLong {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    width:100%;
+    display: inline-block;
+    /* border:1px solid black; */
+    max-height: 250px;
+    min-height: 250px;
+    overflow: scroll;
+}
+#messagesLong span {
+    overflow-y: scroll;
+    overflow: scroll;
+}
+
+#messagesMot {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding: 12px;
+    width:100%;
+    display: inline-block;
+    /* border:1px solid black; */
+    max-height: 250px;
+    min-height: 250px;
+    overflow: scroll;
+}
+#messagesMot span {
+    overflow-y: scroll;
+    overflow: scroll;
+}
