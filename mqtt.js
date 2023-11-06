@@ -96,7 +96,7 @@ function onConnectLat() {
 }
 
 function onConnectLong() {
-    topic = "pet123-long"
+    topic = "pet123-lon"
 
     document.getElementById("messagesLong").innerHTML += "<span> Showing longitude... </span><br>";
 
